@@ -4,4 +4,7 @@
   <%= render @pins %>
 </div>
 
-<%= will_paginate @pins %>
+<% if user_signed_in? %>
+	<%= will_paginate @pins %>
+<% else %>
+<% end %>
